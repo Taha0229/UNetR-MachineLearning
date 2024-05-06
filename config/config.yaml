@@ -6,3 +6,8 @@ data_ingestion:
   source_URL: https://drive.google.com/uc?export=download&id=1ylLRWqxjH-bpeFFI3YAT7kC0nBL3K2gx
   local_data_file: artifacts/data_ingestion/LaPa.tar.gz
   unzip_dir: artifacts ## Since, we are using shutil, it will make automatically unzip LaPa.tar.gz in artifacts > LaPa folder
+
+prepare_models:
+  root_dir: artifacts/prepare_model
+  full_model_path: artifacts/prepare_model/full_model.keras
+  lite_model_path: artifacts/prepare_model/lite_model.keras
