@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "UNetR_MC_Full-stack"
 AUTHOR_USER_NAME = "Taha0229"
-SRC_REPO = "UNetR_MultiClass"
+SRC_REPO = "UNetRMultiClass"
 AUTHOR_EMAIL = "sheikhtahamaroof@gmail.com"
 
 
