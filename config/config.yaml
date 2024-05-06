@@ -11,3 +11,15 @@ prepare_models:
   root_dir: artifacts/prepare_model
   full_model_path: artifacts/prepare_model/full_model.keras
   lite_model_path: artifacts/prepare_model/lite_model.keras
+
+
+prepare_callbacks:
+  root_dir: artifacts/prepare_callbacks
+  tensorboard_root_log_dir: artifacts/prepare_callbacks/tensorboard_log_dir
+  checkpoint_model_filepath: artifacts/prepare_callbacks/checkpoint_dir/model.keras
+  csv_log_filepath: artifacts/prepare_callbacks/csv_log/csv_log.csv
+
+
+training:
+  root_dir: artifacts/training
+  trained_model_path: artifacts/training/model.keras

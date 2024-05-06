@@ -13,12 +13,18 @@ class PrepareModelTrainingPipeline:
     def main(self):
         config = ConfigurationManager()
         prepare_full_model_config = config.get_prepare_full_model_config()
-        prepare_full_model = PrepareModel(config=prepare_full_model_config)
-        prepare_full_model.get_full_model()
-        
+        if not os.path.exists(prepare_full_model_config.model_path):
+            prepare_full_model = PrepareModel(config=prepare_full_model_config)
+            prepare_full_model.get_full_model()
+        else:
+            logger.info("Full model already exists, skipping ")
+            
         prepare_lite_model_config = config.get_prepare_lite_model_config()
-        prepare_lite_model = PrepareModel(config=prepare_lite_model_config)
-        prepare_lite_model.get_lite_model()
+        if not os.path.exists(prepare_lite_model_config.model_path):
+            prepare_lite_model = PrepareModel(config=prepare_lite_model_config)
+            prepare_lite_model.get_lite_model()
+        else:
+            logger.info("Lite  model already exists, skipping ")
     
     
 if __name__ == '__main__':
