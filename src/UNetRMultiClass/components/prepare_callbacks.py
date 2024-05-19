@@ -3,6 +3,7 @@ import time
 import os
 import tensorflow as tf
 
+
 class PrepareCallback:
     def __init__(self, config: PrepareCallbacksConfig):
         self.config = config
@@ -43,4 +44,10 @@ class PrepareCallback:
         )
 
     def get_callbacks_list(self):
-        return [self._create_tb_callbacks, self._create_ckpt_callbacks, self._create_csvlogger_callbacks, self._create_reducelr_callbacks, self._create_earlystopping_callbacks]
+        return [
+            self._create_tb_callbacks,
+            self._create_ckpt_callbacks,
+            self._create_csvlogger_callbacks,
+            self._create_reducelr_callbacks,
+            self._create_earlystopping_callbacks,
+        ]

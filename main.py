@@ -1,5 +1,7 @@
 from UNetRMultiClass import logger
-from UNetRMultiClass.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+from UNetRMultiClass.pipeline.stage_01_data_ingestion import (
+    DataIngestionTrainingPipeline,
+)
 from UNetRMultiClass.pipeline.stage_02_prepare_model import PrepareModelTrainingPipeline
 from UNetRMultiClass.pipeline.stage_03_training import ModelTrainingPipeline
 

@@ -17,7 +17,7 @@ prepare_callbacks:
   root_dir: artifacts/prepare_callbacks
   tensorboard_root_log_dir: artifacts/prepare_callbacks/tensorboard_log_dir
   checkpoint_model_filepath: artifacts/prepare_callbacks/checkpoint_dir/model.keras
-  csv_log_filepath: artifacts/prepare_callbacks/csv_log/csv_log.csv
+  csv_log_filepath: artifacts/prepare_callbacks/csv_log/train_log.csv
 
 
 training:

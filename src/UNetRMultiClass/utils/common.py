@@ -4,14 +4,13 @@ import yaml
 from UNetRMultiClass import logger
 import json
 import joblib
-from ensure import ensure_annotations #this is used for type safety to strictly apply data types
-from box import ConfigBox #this is used to access dict element using '.'
+from ensure import (
+    ensure_annotations,
+)  # this is used for type safety to strictly apply data types
+from box import ConfigBox  # this is used to access dict element using '.'
 from pathlib import Path
 from typing import Any
 import base64
-
-
-
 
 
 @ensure_annotations
@@ -37,7 +36,6 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise ValueError("yaml file is empty")
     except Exception as e:
         raise e
-    
 
 
 @ensure_annotations
@@ -66,8 +64,6 @@ def save_json(path: Path, data: dict):
         json.dump(data, f, indent=4)
 
     logger.info(f"json file saved at: {path}")
-
-
 
 
 @ensure_annotations
@@ -113,6 +109,7 @@ def load_bin(path: Path) -> Any:
     logger.info(f"binary file loaded from: {path}")
     return data
 
+
 @ensure_annotations
 def get_size(path: Path) -> str:
     """get size in KB
@@ -123,13 +120,13 @@ def get_size(path: Path) -> str:
     Returns:
         str: size in KB
     """
-    size_in_kb = round(os.path.getsize(path)/1024)
+    size_in_kb = round(os.path.getsize(path) / 1024)
     return f"~ {size_in_kb} KB"
 
 
 def decodeImage(imgstring, fileName):
     imgdata = base64.b64decode(imgstring)
-    with open(fileName, 'wb') as f:
+    with open(fileName, "wb") as f:
         f.write(imgdata)
         f.close()
 

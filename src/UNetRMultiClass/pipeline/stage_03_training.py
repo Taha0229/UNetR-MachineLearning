@@ -5,7 +5,6 @@ from UNetRMultiClass.components.training import Training
 from UNetRMultiClass import logger
 
 
-
 STAGE_NAME = "Model Training"
 
 
@@ -22,13 +21,10 @@ class ModelTrainingPipeline:
         training_config = config.get_training_config()
         training = Training(config=training_config)
         training.get_base_model()
-        training.train(
-            callback_list=callback_list
-        )
+        training.train(callback_list=callback_list)
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         logger.info(f"*******************")
         logger.info(f">>>>>> Stage {STAGE_NAME} Started <<<<<<")

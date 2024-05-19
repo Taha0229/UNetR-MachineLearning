@@ -11,7 +11,6 @@ from UNetRMultiClass.entity.config_entity import (
 
 
 class ConfigurationManager:
-
     def __init__(
         self, config_filepath=CONFIG_FILE_PATH, params_filepath=PARAMS_FILE_PATH
     ):
@@ -19,10 +18,24 @@ class ConfigurationManager:
         self.config = read_yaml(config_filepath)
         self.params = read_yaml(params_filepath)
         create_directories([self.config.artifacts_root])
-        self.params.LITE_NUM_PATCHES = (self.params.LITE_IMAGE_SIZE**2) // ( self.params.LITE_PATCH_SIZE**2)
-        self.params.FULL_NUM_PATCHES = (self.params.FULL_IMAGE_SIZE**2) // (self.params.FULL_PATCH_SIZE**2)
-        self.params.LITE_FLAT_PATCHES_SHAPE = (self.params.LITE_NUM_PATCHES, self.params.LITE_PATCH_SIZE * self.params.LITE_PATCH_SIZE * self.params.NUM_CHANNELS)
-        self.params.FULL_FLAT_PATCHES_SHAPE = (self.params.FULL_NUM_PATCHES, self.params.FULL_PATCH_SIZE * self.params.FULL_PATCH_SIZE * self.params.NUM_CHANNELS)
+        self.params.LITE_NUM_PATCHES = (self.params.LITE_IMAGE_SIZE**2) // (
+            self.params.LITE_PATCH_SIZE**2
+        )
+        self.params.FULL_NUM_PATCHES = (self.params.FULL_IMAGE_SIZE**2) // (
+            self.params.FULL_PATCH_SIZE**2
+        )
+        self.params.LITE_FLAT_PATCHES_SHAPE = (
+            self.params.LITE_NUM_PATCHES,
+            self.params.LITE_PATCH_SIZE
+            * self.params.LITE_PATCH_SIZE
+            * self.params.NUM_CHANNELS,
+        )
+        self.params.FULL_FLAT_PATCHES_SHAPE = (
+            self.params.FULL_NUM_PATCHES,
+            self.params.FULL_PATCH_SIZE
+            * self.params.FULL_PATCH_SIZE
+            * self.params.NUM_CHANNELS,
+        )
         ## altering the num_patches because the YAML outputs the string instead of the expression
 
     def get_data_ingestion_config(self) -> DataIngestionConfig:
@@ -115,14 +128,14 @@ class ConfigurationManager:
             trained_model_path=Path(training.trained_model_path),
             untrained_model_path=Path(prepare_models.lite_model_path),
             training_data=Path(training_data),
-            params_image_size=params.LITE_IMAGE_SIZE,  
-            params_num_classes=params.NUM_CLASSES,  
+            params_image_size=params.LITE_IMAGE_SIZE,
+            params_num_classes=params.NUM_CLASSES,
             params_num_channels=params.NUM_CHANNELS,
             params_num_patches=params.LITE_NUM_PATCHES,
-            params_patch_size=params.LITE_PATCH_SIZE,  
-            params_flat_patches_shape=params.LITE_FLAT_PATCHES_SHAPE,  
-            params_batch_size=params.BATCH_SIZE,  
-            params_epochs=params.NUM_EPOCHS,  
+            params_patch_size=params.LITE_PATCH_SIZE,
+            params_flat_patches_shape=params.LITE_FLAT_PATCHES_SHAPE,
+            params_batch_size=params.BATCH_SIZE,
+            params_epochs=params.NUM_EPOCHS,
         )
 
         return training_config
