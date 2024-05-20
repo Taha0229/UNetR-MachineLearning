@@ -3,8 +3,8 @@
 ⚡Combining the power of Transformers with UNet for state-of-the-art image segmentation task💪  <br><br>
 Module 1. [UNETR-MachineLearning](https://github.com/Taha0229/UNetR-MachineLearning)  
 Module 2. [Develop and Deploy Backend of UNETR ](https://github.com/Taha0229/UNetR-slim-backend)   
-Module 2. [Develop and Deploy Frontend of UNTER](https://github.com/Taha0229/UNetR-frontend)
-Module 2. Develop and Deploy Frontend of UNTER
+Module 3. [Develop and Deploy Frontend of UNTER](https://github.com/Taha0229/UNetR-frontend)
+
 
 # Project Brief
 
