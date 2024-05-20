@@ -155,7 +155,7 @@ In root folder, we have:
 5. Setup.py: To setup the project as a package
 6. template.py: Used in the beginning of the project to create files and folders and populate them as needed
 
-
+<pre>
 ├───artifacts                                               # for storing by-products during the development process 
 │   ├───data_ingestion                                      ## stores zipped dataset
 │   ├───LaPa                                                ## Dataset name
@@ -207,59 +207,8 @@ In root folder, we have:
     │   ├───utils                                           ## Contains the commonly used utils
     │   └───__pycache__
     └───UNetRMultiClass.egg-info
+</pre>
 
-
-├───artifacts                                                 
-│   ├───data_ingestion                                    
-│   ├───LaPa                                                
-│   │   ├───test                                            
-│   │   │   ├───images <br>
-│   │   │   ├───labels <br>
-│   │   │   └───landmarks <br>
-│   │   ├───train                                           
-│   │   │   ├───images<br>
-│   │   │   ├───labels<br>
-│   │   │   └───landmarks<br>
-│   │   └───val                                            
-│   │       ├───images<br>
-│   │       ├───labels<br>
-│   │       └───landmarks<br>
-│   ├───prepare_callbacks                                  
-│   │   ├───checkpoint_dir<br>
-│   │   ├───csv_log<br>
-│   │   └───tensorboard_log_dir <br>
-│   │       ├───tb_logs_at_2024-05-07-03-58-10              <br>
-│   │       │   └───train<br>
-│   │       ├───tb_logs_at_2024-05-07-04-02-02<br>
-│   │       │   └───train<br>
-│   │       ├───tb_logs_at_2024-05-07-04-51-04<br>
-│   │       │   └───train<br>
-│   │       └───tb_logs_at_2024-05-19-23-06-06<br>
-│   │           └───train<br>
-│   ├───prepare_model                                       
-│   └───training                                           
-├───config                                                 
-├───logs                                                  
-├───outputs                                                
-│   └───predict<br>
-├───research                                               
-│   └───logs<br>
-├───src                                                   
-    │   │   └───__pycache__<br>
-    ├───UNetRMultiClass<br>
-    │   ├───components                 
-    │   │   └───__pycache__<br>
-    │   ├───config                                        
-    │   │   └───__pycache__<br>
-    │   ├───constants                                       
-    │   │   └───__pycache__<br>
-    │   ├───entity                                          
-    │   │   └───__pycache__     <br>
-    │   ├───pipeline                                       
-    │   │   └───__pycache__<br>
-    │   ├───utils                                          
-    │   └───__pycache__<br>
-    └───UNetRMultiClass.egg-info<br>
 
 ### Special Mentions:
 1. Entity : primarily, an entity is the return type of the pipeline's Config. This is used validate the configurations of the pipeline.
