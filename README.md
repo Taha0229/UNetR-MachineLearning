@@ -1,6 +1,11 @@
 # Multi-class Image Segmentation using UNETR
 
-⚡Combining the power of Transformers with UNet for state-of-the-art image segmentation task💪
+⚡Combining the power of Transformers with UNet for state-of-the-art image segmentation task💪  <br><br>
+Module 1. [UNETR-MachineLearning](https://github.com/Taha0229/UNetR-MachineLearning)  
+Module 2. [Develop and Deploy Backend of UNETR ](https://github.com/Taha0229/UNetR-slim-backend)   
+Module 2. [Develop and Deploy Frontend of UNTER](https://github.com/Taha0229/UNetR-frontend)
+Module 2. Develop and Deploy Frontend of UNTER
+
 # Project Brief
 
 In October 2021, Ali Hatamizadeh et al. published a paper titled "UNETR: Transformers for 3D Medical Image Segmentation," introducing the UNETR architecture, which outperforms other segmentation models. In essence, UNETR utilizes a contracting-expanding pattern consisting of a stack of transformer as the encoder which is connected to the CNN-based decoder via skip connections, producing segmented image. 
@@ -204,6 +209,57 @@ In root folder, we have:
     └───UNetRMultiClass.egg-info
 
 
+├───artifacts                                                 
+│   ├───data_ingestion                                    
+│   ├───LaPa                                                
+│   │   ├───test                                            
+│   │   │   ├───images <br>
+│   │   │   ├───labels <br>
+│   │   │   └───landmarks <br>
+│   │   ├───train                                           
+│   │   │   ├───images<br>
+│   │   │   ├───labels<br>
+│   │   │   └───landmarks<br>
+│   │   └───val                                            
+│   │       ├───images<br>
+│   │       ├───labels<br>
+│   │       └───landmarks<br>
+│   ├───prepare_callbacks                                  
+│   │   ├───checkpoint_dir<br>
+│   │   ├───csv_log<br>
+│   │   └───tensorboard_log_dir <br>
+│   │       ├───tb_logs_at_2024-05-07-03-58-10              <br>
+│   │       │   └───train<br>
+│   │       ├───tb_logs_at_2024-05-07-04-02-02<br>
+│   │       │   └───train<br>
+│   │       ├───tb_logs_at_2024-05-07-04-51-04<br>
+│   │       │   └───train<br>
+│   │       └───tb_logs_at_2024-05-19-23-06-06<br>
+│   │           └───train<br>
+│   ├───prepare_model                                       
+│   └───training                                           
+├───config                                                 
+├───logs                                                  
+├───outputs                                                
+│   └───predict<br>
+├───research                                               
+│   └───logs<br>
+├───src                                                   
+    │   │   └───__pycache__<br>
+    ├───UNetRMultiClass<br>
+    │   ├───components                 
+    │   │   └───__pycache__<br>
+    │   ├───config                                        
+    │   │   └───__pycache__<br>
+    │   ├───constants                                       
+    │   │   └───__pycache__<br>
+    │   ├───entity                                          
+    │   │   └───__pycache__     <br>
+    │   ├───pipeline                                       
+    │   │   └───__pycache__<br>
+    │   ├───utils                                          
+    │   └───__pycache__<br>
+    └───UNetRMultiClass.egg-info<br>
 
 ### Special Mentions:
 1. Entity : primarily, an entity is the return type of the pipeline's Config. This is used validate the configurations of the pipeline.
